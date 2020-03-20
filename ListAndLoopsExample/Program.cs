@@ -7,57 +7,66 @@ namespace ListAndLoopsExample
     {
         static void Main(string[] args)
         {
-            var dh = new DataHandler();
-            var kahvi = dh.CreateCoffee();
-            dh.coffees.Add(kahvi);
+            DataHandler dh = new DataHandler();
+            dh.FillPersonsWithTestData();
+            dh.FillCompaniesWithTestData();
+            dh.FillCoffeesWithTestData();
 
-            var Person dh = new Person();
-            var henkilö = dh.CreatePerson();
-            dh.persons.Add(henkilö);
-
-            var paketti = new Coffee("pressa", 4.50 , Coffee.Roast.light, "joku");
+            MainMenu mainMenu = new MainMenu(dh);
+            mainMenu.InitializeMainMenu();
 
 
+            //var paketti1 = new Coffee("Presidentti");
+            //var paketti2 = new Coffee("Kulta Katriina");
+            //var paketti3 = new Coffee("Brazil");
+            //var paketti4 = new Coffee("Löftberg");
+
+            //List<Coffee> coffees = new List<Coffee>();
+            //coffees.Add(paketti1);
+            //coffees.Add(paketti2);
+            //coffees.Add(paketti3);
+            //coffees.Add(paketti4);
 
 
-           // var paketti1 = new Coffee("Presidentti");
-           // var paketti2 = new Coffee("Kulta Katriina");
-           // var paketti3 = new Coffee("Brazil");
-           // var paketti4 = new Coffee("Löftberg");
+            //Console.WriteLine(coffees[0].brand);
 
-           // List<Coffee> coffees = new List<Coffee>();
-           // coffees.Add(paketti1);
-           // coffees.Add(paketti2);
-           // coffees.Add(paketti3);
-           // coffees.Add(paketti4);
+            //foreach (Coffee item in coffees)
+            //{
+            //    Console.WriteLine($"Merkki {item.brand}");
 
 
-           //// Console.WriteLine(coffees[0].brand);
+            //}
+            //for (int i = 0; i < coffees.Count; i++)
+            //{
+            //    Console.WriteLine($"{i}. Merkki : {coffees[i].brand}");
+            //}
 
-           // foreach (Coffee item in coffees)
-           // {
-           //     Console.WriteLine($"Merkki {item.brand}");
-
-
-           // }
-           // for (int i = 0; i < coffees.Count; i++)
-           // {
-           //     Console.WriteLine($"{i}. Merkki : {coffees[i].brand}");
-           // }
-
-            //Company -luokka, nimi, yhteyshenkilö(person), maa
-            //Person -luokka etunimi, sukunimi, puhelinnumero, email
-            //DataHandler -luokka, list<coffee>, list<person>,
-            //metodi joka kysyy kahvin merkin, hinnan, roastin -> luo näistä instanssin Coffee -> lisää ko instassin listaan.
+            //Company - luokka, nimi, yhteyshenkilö(person), maa
+            //Person - luokka etunimi, sukunimi, puhelinnumero, email
+            //DataHandler - luokka, list<coffee>, list<person>,
+            //metodi joka kysyy kahvin merkin, hinnan, roastin->luo näistä instanssin Coffee->lisää ko instassin listaan.
         }
-        
+
     }
 
-  
-  
+
+
     //kahvi
     //-merkki, hinta, paahtoaste, maahantuoja
     //constructorit ilman parametrejä, pelkällä nimellä, kaikilla atribuuteilla
 
 
 }
+            //var dh = new DataHandler();
+            ////var kahvi = dh.CreateCoffee();
+            ////dh.coffees.Add(kahvi);
+
+            //var tyyppi = new Person();
+            //var henkilö = dh.CreatePerson();
+            //Console.WriteLine($"{henkilö.firstName}");
+            //Console.WriteLine($"{henkilö.lastName}");
+            //Console.WriteLine($"{henkilö.phone}");
+            //Console.WriteLine($"{henkilö.email}");
+            //dh.persons.Add(henkilö);
+
+            //var paketti = new Coffee("pressa", 4.50 , Coffee.Roast.light, "joku");

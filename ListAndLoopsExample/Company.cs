@@ -11,7 +11,7 @@ namespace ListAndLoopsExample
         public string name;
         public Person contactPerson;
         public string country;
-
+        
 
 
     public Company()
@@ -19,10 +19,12 @@ namespace ListAndLoopsExample
 
         }
 
-        public Company(string name, string person, string country)
+        public Company(string name, Person contactPerson, string country)
         {
-
-
+            this.name = name;
+            this.contactPerson = contactPerson;
+            this.country = country;
+            
         }
 
     }
